@@ -1,0 +1,362 @@
+[
+  {
+    "id": "01",
+    "file": "01_Login_Multi_Role_Akses_Staf.png",
+    "title": "Halaman Masuk & Demo Switcher Multi-Role",
+    "category": "desktop",
+    "role": "Seluruh Staf (8 Peran)",
+    "role_code": "all",
+    "device": "Desktop 1280px+ / Tablet",
+    "device_type": "desktop",
+    "summary": "Portal autentikasi tunggal dengan fitur Demo Switcher 1-klik untuk 8 peran staf internal (Owner, BM, Admin, FO, SA, Mekanik, QC, Kasir).",
+    "highlights": [
+      "Pemisahan hak akses ketat (Role-Based Access Control) otomatis",
+      "Demo Switcher 1-klik untuk presentasi & pengujian lintas peran",
+      "Redirect instan ke antarmuka yang sesuai dengan tugasnya",
+      "Kredensial tersandi aman dengan proteksi brute-force login"
+    ],
+    "business_value": "Memudahkan staf login sesuai wewenang dan memungkinkan pengujian atau presentasi alur kerja bengkel secara mulus tanpa repot login-logout manual."
+  },
+  {
+    "id": "02",
+    "file": "02_Dashboard_Operasional_Bengkel.png",
+    "title": "Dashboard Operasional Harian Bengkel",
+    "category": "desktop",
+    "role": "Branch Manager, SA, Kepala Bengkel",
+    "role_code": "sa",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Pusat komando operasional bengkel untuk memonitor utilisasi lift/stall, daftar pekerjaan berjalan, antrean aktif, dan alert operasional real-time.",
+    "highlights": [
+      "KPI Card: Unit Masuk Hari Ini, SPK In-Progress, Menunggu Part, Siap Diambil",
+      "Visualisasi okupansi Car Lift, Pit Motor, dan Diagnostic Bay",
+      "Daftar pekerjaan aktif dengan SLA estimasi waktu selesai",
+      "Deteksi dini keterlambatan pekerjaan (Early Warning System)"
+    ],
+    "business_value": "Meningkatkan utilisasi stall hingga 35% dan memastikan tidak ada kendaraan pelanggan yang terlantar tanpa pengerjaan di bengkel."
+  },
+  {
+    "id": "03",
+    "file": "03_Dashboard_Eksekutif_Owner.png",
+    "title": "Dashboard Eksekutif & Ringkasan Finansial Owner",
+    "category": "executive",
+    "role": "Owner, Direktur Operasional",
+    "role_code": "owner",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Tampilan tingkat tinggi khusus pemilik bengkel untuk melihat tren pendapatan, volume unit 7 hari, performa teknisi, dan margin suku cadang.",
+    "highlights": [
+      "Grafik tren volume masuk kendaraan 7 hari (Komparasi Mobil vs Sepeda Motor)",
+      "Breakdown pendapatan: Penjualan Jasa Servis vs Penjualan Suku Cadang",
+      "Produktivitas per mekanik dan rata-rata durasi pengerjaan per unit",
+      "Ringkasan multi-cabang (Multi-Branch Readiness) dalam 1 layar"
+    ],
+    "business_value": "Memberikan kepastian angka finansial harian dan bulanan secara objektif kepada pemilik bisnis tanpa perlu memeriksa tumpukan nota manual."
+  },
+  {
+    "id": "04",
+    "file": "04_Manajemen_Antrean_Servis_Mobil_Motor.png",
+    "title": "Manajemen Antrean Servis (Jalur Mobil & Motor)",
+    "category": "desktop",
+    "role": "Front Office (FO), Customer Service",
+    "role_code": "fo",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Sistem antrean modern dengan pemisahan jalur atomik untuk mobil dan motor, lengkap dengan fitur panggilan suara otomatis dan check-in walk-in.",
+    "highlights": [
+      "Pemisahan jalur tiket: Prefix A-001 (Mobil) dan Prefix M-001 (Motor)",
+      "Pemberian nomor atomik dengan Database Pessimistic Locking (Bebas Duplikat)",
+      "Tombol Audio Broadcast untuk memanggil nomor antrean ke pengeras suara",
+      "Integrasi check-in instan dari reservasi booking online"
+    ],
+    "business_value": "Menghilangkan kekacauan di area meja depan, mengurangi waktu tunggu hingga 40%, dan menciptakan suasana bengkel yang tertib profesional."
+  },
+  {
+    "id": "05",
+    "file": "05_Monitoring_Utilisasi_Stall_dan_Pit_Bay.png",
+    "title": "Monitoring Utilisasi Stall, Lift, & Bay",
+    "category": "desktop",
+    "role": "Branch Manager, Supervisor QC, SA",
+    "role_code": "supervisor",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Peta digital lantai bengkel (Shopfloor Bay Layout) yang menampilkan status setiap car lift, flat stall, dan pit motor secara langsung.",
+    "highlights": [
+      "Indikator visual status stall: Kosong (Hijau), Terisi (Oranye), Perlu Bantuan (Merah)",
+      "Identitas mobil, nopol, dan nama mekanik tertera jelas di tiap stall",
+      "Timer durasi pengerjaan fisik real-time",
+      "Alokasi kendaraan dari antrean tunggu ke stall yang kosong secara efisien"
+    ],
+    "business_value": "Memaksimalkan kapasitas fisik bengkel, mencegah stall menganggur, dan mempercepat rotasi kendaraan servis per hari."
+  },
+  {
+    "id": "06",
+    "file": "06_Daftar_Jadwal_Booking_Servis.png",
+    "title": "Daftar & Manajemen Jadwal Booking Servis",
+    "category": "desktop",
+    "role": "Front Office, Service Advisor",
+    "role_code": "fo",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Tabel pengelolaan seluruh reservasi servis pelanggan dengan tab status cerdas (Pending, Dikonfirmasi, Checked-in, Dibatalkan).",
+    "highlights": [
+      "Penyaringan berdasarkan tanggal kedatangan, kategori servis, dan status",
+      "Aksi 1-klik untuk konfirmasi kehadiran atau penjadwalan ulang",
+      "Tombol notifikasi WhatsApp otomatis ke nomor handphone pelanggan",
+      "Pencarian instan berdasarkan nomor polisi atau nama pemesan"
+    ],
+    "business_value": "Membantu bengkel merencanakan beban kerja harian sebelum pintu bengkel dibuka, meminimalkan waktu tunggu di jam-jam sibuk."
+  },
+  {
+    "id": "07",
+    "file": "07_Form_Pendaftaran_Booking_Baru.png",
+    "title": "Form Registrasi Booking Servis Baru (Internal FO)",
+    "category": "desktop",
+    "role": "Front Office, Customer Service",
+    "role_code": "fo",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Formulir cepat pendaftaran reservasi bagi pelanggan yang menghubungi via telepon, WhatsApp resmi, atau datang langsung ke meja pendaftaran.",
+    "highlights": [
+      "Pencarian otomatis data pelanggan lama (Auto-fill data kendaraan)",
+      "Pemisahan kategori servis: Servis Berkala, Tune Up, Ganti Oli, Perbaikan Berat",
+      "Pemilihan kuota jam kedatangan (Pagi, Siang, Sore) dengan batas kapasitas",
+      "Pencatatan catatan keluhan awal pelanggan"
+    ],
+    "business_value": "Mempercepat proses administrasi pendaftaran pelanggan menjadi kurang dari 1 menit per kendaraan."
+  },
+  {
+    "id": "08",
+    "file": "08_Portal_Pelanggan_Pilih_Jadwal_Mobile.png",
+    "title": "Portal Pelanggan: Pemilihan Jadwal Servis Mandiri",
+    "category": "mobile",
+    "role": "Pelanggan (Customer Publik)",
+    "role_code": "customer",
+    "device": "Mobile 390px Portrait",
+    "device_type": "mobile",
+    "summary": "Antarmuka web seluler elegan bagi pelanggan untuk memilih tanggal dan jam servis sesuai waktu luang mereka langsung dari browser ponsel.",
+    "highlights": [
+      "Desain responsif mobile murni tanpa perlu download aplikasi di App Store/Play Store",
+      "Kalender interaktif dengan indikator tanggal buka & slot yang tersedia",
+      "Pilihan sesi jam ramah sentuhan (Pagi 08:00-11:00, Siang 13:00-15:00)",
+      "Indikator sisa kuota servis transparan"
+    ],
+    "business_value": "Memberikan kenyamanan reservasi 24 jam sehari bagi pelanggan, meningkatkan retensi dan konversi pelanggan baru."
+  },
+  {
+    "id": "09",
+    "file": "09_Portal_Pelanggan_Konfirmasi_Booking_Mobile.png",
+    "title": "Portal Pelanggan: Tiket Konfirmasi Booking Digital",
+    "category": "mobile",
+    "role": "Pelanggan (Customer Publik)",
+    "role_code": "customer",
+    "device": "Mobile 390px Portrait",
+    "device_type": "mobile",
+    "summary": "Halaman konfirmasi reservasi dengan kartu digital resmi memuat Kode Booking monospaced dan panduan kedatangan ke bengkel.",
+    "highlights": [
+      "Kode Booking unik resmi (contoh: BK-0231) dalam font monospaced",
+      "Tombol Simpan Jadwal langsung ke Google Calendar atau Apple Calendar",
+      "Tombol Buka Penunjuk Arah Google Maps menuju lokasi bengkel",
+      "Tombol Pantau Status Servis untuk memantau progres ketika tiba di lokasi"
+    ],
+    "business_value": "Mencegah pelanggan lupa jadwal servis dan meningkatkan tingkat kedatangan (Show-up rate) hingga lebih dari 90%."
+  },
+  {
+    "id": "10",
+    "file": "10_Daftar_Work_Order_SPK_Table_View.png",
+    "title": "Manajemen Surat Perintah Kerja (SPK / Work Order)",
+    "category": "desktop",
+    "role": "Service Advisor, BM, Kasir",
+    "role_code": "sa",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Tabel densitas tinggi yang mencatat seluruh dokumen Surat Perintah Kerja (SPK) aktif maupun historis dengan informasi biaya & status lengkap.",
+    "highlights": [
+      "Nomor SPK resmi terstandar (contoh: WO-2026-0142)",
+      "Status badge resmi (Opsi A) dengan dot indikator berdenyut saat pengerjaan",
+      "Informasi teknisi penanggung jawab (Lead Mechanic) dan nomor stall",
+      "Total estimasi biaya jasa dan suku cadang dalam format mata uang Rupiah rapi"
+    ],
+    "business_value": "Menjadi buku besar operasional digital yang rapi, menghilangkan kertas SPK fisik yang rentan hilang atau rusak terkena oli."
+  },
+  {
+    "id": "11",
+    "file": "11_Daftar_Work_Order_SPK_Filter_Status.png",
+    "title": "Manajemen SPK: Segmentasi & Tab Status Alur Servis",
+    "category": "desktop",
+    "role": "Service Advisor, Branch Manager",
+    "role_code": "sa",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Tampilan tersegmen untuk memantau unit berdasarkan siklus hidup: Menunggu Persetujuan, Sedang Dikerjakan, Menunggu Part, Masuk QC, dan Siap Diambil.",
+    "highlights": [
+      "Tab counter dinamis yang langsung memperlihatkan jumlah mobil di tiap tahap",
+      "Filter cepat untuk SPK yang membutuhkan perhatian darurat atau penambahan part",
+      "Akses langsung ke lembar detail SPK dan pengiriman konfirmasi ke pemilik",
+      "Pencarian multi-parameter: Nopol, Nama Pelanggan, atau No SPK"
+    ],
+    "business_value": "Mempermudah Service Advisor memprioritaskan komunikasi dengan pelanggan dan memantau pesanan suku cadang yang belum disetujui."
+  },
+  {
+    "id": "12",
+    "file": "12_Form_Penerbitan_SPK_Baru.png",
+    "title": "Form Penerbitan SPK Baru & Estimasi Servis",
+    "category": "desktop",
+    "role": "Service Advisor (SA)",
+    "role_code": "sa",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Formulir diagnosa teknis lengkap yang digunakan SA saat menerima kendaraan di pit resepsi servis untuk merumuskan estimasi biaya dan waktu.",
+    "highlights": [
+      "Pencatatan Odometer awal (KM) untuk validasi jadwal servis berkala",
+      "Checklist inspeksi awal: Kondisi fisik bodi, keluhan pelanggan, dan diagnosa SA",
+      "Pemilihan katalog jasa servis dan suku cadang asli dengan harga standar",
+      "Alokasi teknisi kepala (Lead Mechanic) dan stall kerja yang dituju"
+    ],
+    "business_value": "Mencegah sengketa biaya dengan pelanggan karena seluruh estimasi harga jasa dan suku cadang terdokumentasi jelas sejak menit pertama."
+  },
+  {
+    "id": "13",
+    "file": "13_Detail_Lengkap_SPK_Work_Order.png",
+    "title": "Detail 360° Surat Perintah Kerja (SPK Master View)",
+    "category": "desktop",
+    "role": "Service Advisor, QC, Kasir, BM",
+    "role_code": "sa",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Pusat informasi komprehensif satu unit kendaraan yang mencakup 5 tab penting: Ringkasan Diagnosa, Lembar Inspeksi, Item Part & Approval, Tugas Mekanik, dan Riwayat Audit.",
+    "highlights": [
+      "Tab approval suku cadang: Status Pre-Approved, Menunggu Persetujuan, atau Ditolak",
+      "Log audit status (Append-Only): Siapa mengubah status apa pada detik berapa",
+      "Tombol kirim tautan persetujuan ke WhatsApp pelanggan dalam 1 klik",
+      "Aksi penerbitan faktur tagihan (Invoice) otomatis setelah lolos inspeksi QC"
+    ],
+    "business_value": "Menjamin akuntabilitas 100% pada setiap rupiah biaya servis dan memudahkan koordinasi antar-staf dari SA hingga Kasir."
+  },
+  {
+    "id": "14",
+    "file": "14_Antarmuka_Tablet_Shopfloor_Mekanik.png",
+    "title": "Antarmuka Tablet Mekanik (Tugas Saya)",
+    "category": "tablet",
+    "role": "Mekanik & Teknisi Lapangan",
+    "role_code": "mechanic",
+    "device": "Shop Floor Tablet 1024px Landscape",
+    "device_type": "tablet",
+    "summary": "Antarmuka ergonomis berorientasi sentuh yang dipasang pada tablet di setiap stall/bay, dirancang khusus untuk kenyamanan mekanik bertangan kerja.",
+    "highlights": [
+      "Target sentuh besar (Touch Target 48px - 52px) mudah ditekan bahkan saat bersarung tangan",
+      "Timer pengerjaan digital monospaced aktif dengan tombol Mulai / Selesai tugas",
+      "Checklist langkah perbaikan teknis interaktif",
+      "Tombol darurat satu sentuh: Panggil Bantuan SA / Supervisor"
+    ],
+    "business_value": "Meniadakan lembaran kertas kerja di bengkel yang kotor, mencatat jam kerja mekanik secara presisi, dan mempercepat respons SA jika ada kendala di stall."
+  },
+  {
+    "id": "15",
+    "file": "15_Antarmuka_Tablet_Inspeksi_QC_Supervisor.png",
+    "title": "Antarmuka Tablet QC Supervisor (Uji Kelayakan)",
+    "category": "tablet",
+    "role": "Supervisor QC, Kepala Mekanik",
+    "role_code": "qc",
+    "device": "Shop Floor Tablet 1024px Landscape",
+    "device_type": "tablet",
+    "summary": "Lembar verifikasi mutu pengerjaan digital sebelum mobil boleh dicuci atau diserahkan ke pelanggan, menjaga reputasi keselamatan bengkel.",
+    "highlights": [
+      "Checklist uji kelayakan 12 poin (Sistem Pengereman, Mesin, Kelistrikan, Tekanan Ban, Uji Jalan, Kebersihan)",
+      "Tombol keputusan tegas: Lolos QC (Hijau Emerald) vs Gagal/Rework (Merah Rose)",
+      "Kewajiban mengisi alasan teknis saat menolak pengerjaan (Rework Guardrail)",
+      "Aturan sistem keras (BR-08): Faktur kasir terkunci sebelum ada persetujuan QC"
+    ],
+    "business_value": "Mencegah terjadinya komplain pelanggan (Zero Return-Job) dan memastikan standar keselamatan kendaraan pelanggan terjamin sempurna."
+  },
+  {
+    "id": "16",
+    "file": "16_Database_Master_Pelanggan.png",
+    "title": "Database Master & CRM Pelanggan Bengkel",
+    "category": "desktop",
+    "role": "Front Office, Admin, CRM",
+    "role_code": "admin",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Basis data terpusat seluruh pelanggan pemilik mobil dan motor, lengkap dengan catatan transaksi, jumlah kunjungan, dan integrasi WhatsApp.",
+    "highlights": [
+      "Tabel pelanggan densitas tinggi dengan nomor telepon format E.164 (+62...)",
+      "Statistik akumulasi kunjungan dan nilai total transaksi (Customer Lifetime Value)",
+      "Tombol ekspor data ke format CSV / Spreadsheet untuk analisa pemasaran",
+      "Akses langsung ke rekam jejak armada kendaraan pelanggan"
+    ],
+    "business_value": "Aset berharga bagi bengkel untuk program loyalitas, pengingat ganti oli berkala, dan promosi promo musiman (Lebaran/Tahun Baru)."
+  },
+  {
+    "id": "17",
+    "file": "17_Profil_Detail_Riwayat_Pelanggan.png",
+    "title": "Profil 360° Riwayat Pelanggan (Customer Record)",
+    "category": "desktop",
+    "role": "Front Office, Service Advisor",
+    "role_code": "fo",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Kartu profil terperinci pelanggan yang menampilkan seluruh kendaraan yang mereka miliki beserta histori riwayat perbaikan masa lalu.",
+    "highlights": [
+      "Identitas kontak terverifikasi dengan alamat lengkap",
+      "Daftar kendaraan multi-unit (Mobil keluarga, mobil operasional, motor)",
+      "Riwayat transaksi SPK masa lalu lengkap dengan total rupiah yang dibayarkan",
+      "Tombol pengiriman pesan WhatsApp pengingat servis berikutnya"
+    ],
+    "business_value": "Membuat pelanggan merasa dihargai dan dipahami secara personal, meningkatkan repeat order dan kepuasan pelanggan."
+  },
+  {
+    "id": "18",
+    "file": "18_Kartu_Medis_Histori_Kendaraan.png",
+    "title": "Kartu Medis Kendaraan (Vehicle Medical Record)",
+    "category": "desktop",
+    "role": "Service Advisor, Mekanik, Admin",
+    "role_code": "sa",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Rekam medis lengkap berbasis nomor polisi unik yang mencatat spesifikasi mesin, transmisi, nomor rangka (VIN), serta riwayat penggantian part.",
+    "highlights": [
+      "Spesifikasi teknis lengkap: Merk, Model, Tahun, VIN, No Mesin, Tipe Transmisi, Odometer KM",
+      "Riwayat seluruh pekerjaan bengkel dan suku cadang yang pernah terpasang",
+      "Pencarian nopol ternormalisasi (anti-duplikasi ejaan plat nomor)",
+      "Deteksi histori kerusakan berulang pada komponen yang sama"
+    ],
+    "business_value": "Membantu Service Advisor mendiagnosa masalah kendaraan dalam hitungan detik berdasarkan riwayat servis sebelumnya."
+  },
+  {
+    "id": "19",
+    "file": "19_Live_Tracking_Servis_Pelanggan_Mobile.png",
+    "title": "Portal Publik: Live Tracking Servis & Online Approval",
+    "category": "mobile",
+    "role": "Pelanggan (Customer Publik)",
+    "role_code": "customer",
+    "device": "Customer Mobile Web 390px",
+    "device_type": "mobile",
+    "summary": "Portal pemantauan transparan berbasis token kriptografis tanpa login, memungkinkan pelanggan memantau progres servis dan menyetujui part tambahan.",
+    "highlights": [
+      "Akses tanpa login via URL Token Kriptografis Unik (Aman & Privat)",
+      "Nomor polisi disamarkan untuk privasi publik: B 12•• XYZ",
+      "Live Progress Stepper: Diterima -> Pengerjaan Stall -> Uji QC -> Siap Diambil",
+      "Modul persetujuan digital temuan part tambahan (Tombol Setuju / Tolak langsung dari HP)"
+    ],
+    "business_value": "Meningkatkan kepuasan dan kepercayaan pelanggan hingga 98%, mengurangi telepon tanya-tanya status ke bengkel hingga 80%."
+  },
+  {
+    "id": "20",
+    "file": "20_Kasir_Penerimaan_Pembayaran.png",
+    "title": "Modul Kasir & Penerimaan Pembayaran",
+    "category": "desktop",
+    "role": "Kasir, Branch Manager",
+    "role_code": "cashier",
+    "device": "Desktop 1280px+",
+    "device_type": "desktop",
+    "summary": "Pusat penagihan SPK yang lolos uji kelayakan QC, penerimaan pembayaran multi-metode (Cash, QRIS, Transfer, EDC), dan pencetakan faktur resmi.",
+    "highlights": [
+      "Daftar SPK siap ditagih (Hanya yang telah disetujui lolos QC teknis)",
+      "Rincian itemized faktur tagihan jasa servis dan suku cadang",
+      "Pilihan metode bayar fleksibel: Tunai, QRIS, Debit/Kredit EDC, Transfer",
+      "Pemisahan status finansial (Paid/Unpaid) dari status pengerjaan fisik"
+    ],
+    "business_value": "Mencegah kebocoran kas kasir, memastikan tidak ada mobil keluar sebelum tagihan beres, dan mempercepat rekonsiliasi kas harian."
+  }
+]

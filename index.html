@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full bg-gray-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BengkelKu WMS — Showcase & Preview Fitur Lengkap (Live Website)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#F97316',
+                            hover: '#EA580C',
+                            soft: '#FFEDD5',
+                            dark: '#C2410C'
+                        },
+                        sidebar: '#1F2937'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-full font-sans text-gray-900 bg-gray-50">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-[#1F2937] text-white shadow-md border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-orange-600 flex items-center justify-center shadow-md">
+                    <span class="material-symbols-outlined text-white text-2xl">build</span>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl font-extrabold tracking-tight text-white">Bengkel<span class="text-orange-500">Ku</span></span>
+                        <span class="px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-full">Live Website Screenshots</span>
+                    </div>
+                    <p class="text-xs text-gray-400 hidden sm:block">Workshop Management System &bull; Live Preview & Dokumentasi Fitur</p>
+                </div>
+            </div>
+
+            <!-- Header Quick Actions -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button onclick="startPresentation()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold shadow transition cursor-pointer">
+                    <span class="material-symbols-outlined text-base">slideshow</span>
+                    <span>Mode Presentasi Klien</span>
+                </button>
+                <a href="../DOKUMENTASI_FITUR_BENGKELKU_WMS.md" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-200 text-xs font-medium border border-gray-600 transition">
+                    <span class="material-symbols-outlined text-base">description</span>
+                    <span class="hidden sm:inline">Dokumentasi Teks (MD)</span>
+                </a>
+                <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-200 text-xs font-medium border border-gray-600 transition cursor-pointer">
+                    <span class="material-symbols-outlined text-base">print</span>
+                    <span class="hidden sm:inline">Cetak</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="bg-white border-b border-gray-200 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                <div class="max-w-3xl space-y-2">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        100% Screenshot Live Langsung dari Aplikasi Berjalan
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                        Live Preview & Fitur <span class="text-orange-600">BengkelKu WMS</span>
+                    </h1>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Seluruh tangkapan layar di bawah ini diambil secara langsung dari sistem aplikasi web BengkelKu yang sedang aktif berjalan dengan database operasional riil. Tampilan ini 100% presisi dengan apa yang akan Anda dan klien lihat saat mendemonstrasikan sistem ini secara langsung.
+                    </p>
+                </div>
+
+                <!-- Fast Stats Metric Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div class="text-center p-2">
+                        <span class="block text-2xl font-black text-orange-600 font-mono">20</span>
+                        <span class="text-[11px] font-semibold text-gray-600">Layar Live Aktif</span>
+                    </div>
+                    <div class="text-center p-2 border-l border-gray-200">
+                        <span class="block text-2xl font-black text-gray-900 font-mono">8+1</span>
+                        <span class="text-[11px] font-semibold text-gray-600">Peran & Portal Publik</span>
+                    </div>
+                    <div class="text-center p-2 border-l border-gray-200">
+                        <span class="block text-2xl font-black text-gray-900 font-mono">3</span>
+                        <span class="text-[11px] font-semibold text-gray-600">Form Factor (Web/Tablet/HP)</span>
+                    </div>
+                    <div class="text-center p-2 border-l border-gray-200">
+                        <span class="block text-2xl font-black text-emerald-600 font-mono">100%</span>
+                        <span class="text-[11px] font-semibold text-gray-600">Live & Teruji</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Workflow Bar -->
+    <section class="bg-gray-100/70 border-b border-gray-200 py-4 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-orange-600">route</span>
+                Alur Operasional Inti BengkelKu WMS:
+            </h2>
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 text-xs font-semibold">
+                <div class="flex-shrink-0 px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-gray-800 shadow-2xs flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-gray-200 text-gray-700 font-mono text-[10px] flex items-center justify-center font-bold">1</span>
+                    <span>Booking / Walk-in</span>
+                </div>
+                <span class="text-gray-400">&rarr;</span>
+                <div class="flex-shrink-0 px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-gray-800 shadow-2xs flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 font-mono text-[10px] flex items-center justify-center font-bold">2</span>
+                    <span>Check-in Antrean (FO)</span>
+                </div>
+                <span class="text-gray-400">&rarr;</span>
+                <div class="flex-shrink-0 px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-gray-800 shadow-2xs flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-purple-100 text-purple-700 font-mono text-[10px] flex items-center justify-center font-bold">3</span>
+                    <span>Diagnosa & SPK (SA)</span>
+                </div>
+                <span class="text-gray-400">&rarr;</span>
+                <div class="flex-shrink-0 px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-gray-800 shadow-2xs flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-orange-100 text-orange-700 font-mono text-[10px] flex items-center justify-center font-bold">4</span>
+                    <span>Pengerjaan Stall (Mekanik)</span>
+                </div>
+                <span class="text-gray-400">&rarr;</span>
+                <div class="flex-shrink-0 px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-gray-800 shadow-2xs flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono text-[10px] flex items-center justify-center font-bold">5</span>
+                    <span>Uji Kelayakan QC (Supervisor)</span>
+                </div>
+                <span class="text-gray-400">&rarr;</span>
+                <div class="flex-shrink-0 px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-gray-800 shadow-2xs flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-teal-100 text-teal-700 font-mono text-[10px] flex items-center justify-center font-bold">6</span>
+                    <span>Faktur & Pembayaran (Kasir)</span>
+                </div>
+                <span class="text-gray-400">&rarr;</span>
+                <div class="flex-shrink-0 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-900 shadow-2xs flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-emerald-600 text-white font-mono text-[10px] flex items-center justify-center font-bold">&check;</span>
+                    <span>Unit Siap Diambil</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter & Search Toolbar -->
+    <section class="sticky top-[61px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-200 py-3 px-4 sm:px-6 lg:px-8 shadow-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+            <!-- Device Category Filters -->
+            <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="deviceFilters">
+                <button onclick="setDeviceFilter('all')" class="device-btn active px-3 py-1.5 rounded-lg text-xs font-bold transition bg-gray-900 text-white shadow-2xs" data-device="all">
+                    Semua Layar (20)
+                </button>
+                <button onclick="setDeviceFilter('desktop')" class="device-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-gray-100 text-gray-700 hover:bg-gray-200" data-device="desktop">
+                    🖥️ Desktop Web Admin (15)
+                </button>
+                <button onclick="setDeviceFilter('tablet')" class="device-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-gray-100 text-gray-700 hover:bg-gray-200" data-device="tablet">
+                    📋 Shop Floor Tablet (2)
+                </button>
+                <button onclick="setDeviceFilter('mobile')" class="device-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-gray-100 text-gray-700 hover:bg-gray-200" data-device="mobile">
+                    📱 Customer Mobile (3)
+                </button>
+            </div>
+
+            <!-- Role Filter & Search -->
+            <div class="flex items-center gap-2 w-full md:w-auto justify-end">
+                <div class="relative flex-1 sm:w-48">
+                    <select id="roleFilter" onchange="applyFilters()" class="w-full text-xs font-medium rounded-lg border border-gray-300 bg-white py-1.5 pl-2.5 pr-8 text-gray-700 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500">
+                        <option value="all">Semua Peran (Role)</option>
+                        <option value="fo">Front Office (FO)</option>
+                        <option value="sa">Service Advisor (SA)</option>
+                        <option value="mechanic">Mekanik</option>
+                        <option value="qc">QC Supervisor</option>
+                        <option value="cashier">Kasir</option>
+                        <option value="owner">Owner / Eksekutif</option>
+                        <option value="customer">Customer Publik</option>
+                    </select>
+                </div>
+                <div class="relative flex-1 sm:w-64">
+                    <span class="material-symbols-outlined absolute left-2.5 top-1.5 text-gray-400 text-lg">search</span>
+                    <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Cari nama fitur atau kata kunci..." class="w-full text-xs font-normal rounded-lg border border-gray-300 bg-white py-1.5 pl-8 pr-3 text-gray-800 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content: Showcase Grid -->
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <!-- Result count bar -->
+        <div class="flex items-center justify-between mb-6">
+            <p class="text-xs font-semibold text-gray-600" id="resultCount">Menampilkan 20 dari 20 Layar Sistem</p>
+            <div class="text-xs text-gray-400 flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">touch_app</span>
+                Klik kartu atau gambar untuk melihat resolusi penuh & rincian
+            </div>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="featuresGrid">
+
+            <!-- Feature Card 01 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="01"
+                 data-device="desktop"
+                 data-role="all"
+                 data-title="halaman masuk & demo switcher multi-role"
+                 data-summary="portal autentikasi tunggal dengan fitur demo switcher 1-klik untuk 8 peran staf internal (owner, bm, admin, fo, sa, mekanik, qc, kasir)."
+                 onclick="openModal('01')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="01_Login_Multi_Role_Akses_Staf.png" alt="Halaman Masuk & Demo Switcher Multi-Role" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #01
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+ / Tablet
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Seluruh Staf (8 Peran)</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Halaman Masuk & Demo Switcher Multi-Role
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Portal autentikasi tunggal dengan fitur Demo Switcher 1-klik untuk 8 peran staf internal (Owner, BM, Admin, FO, SA, Mekanik, QC, Kasir).
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pemisahan hak akses ketat (Role-Based Access Control) otomatis</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Demo Switcher 1-klik untuk presentasi & pengujian lintas peran</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Redirect instan ke antarmuka yang sesuai dengan tugasnya</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 02 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="02"
+                 data-device="desktop"
+                 data-role="sa"
+                 data-title="dashboard operasional harian bengkel"
+                 data-summary="pusat komando operasional bengkel untuk memonitor utilisasi lift/stall, daftar pekerjaan berjalan, antrean aktif, dan alert operasional real-time."
+                 onclick="openModal('02')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="02_Dashboard_Operasional_Bengkel.png" alt="Dashboard Operasional Harian Bengkel" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #02
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Branch Manager, SA, Kepala Bengkel</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Dashboard Operasional Harian Bengkel
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Pusat komando operasional bengkel untuk memonitor utilisasi lift/stall, daftar pekerjaan berjalan, antrean aktif, dan alert operasional real-time.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>KPI Card: Unit Masuk Hari Ini, SPK In-Progress, Menunggu Part, Siap Diambil</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Visualisasi okupansi Car Lift, Pit Motor, dan Diagnostic Bay</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Daftar pekerjaan aktif dengan SLA estimasi waktu selesai</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 03 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="03"
+                 data-device="desktop"
+                 data-role="owner"
+                 data-title="dashboard eksekutif & ringkasan finansial owner"
+                 data-summary="tampilan tingkat tinggi khusus pemilik bengkel untuk melihat tren pendapatan, volume unit 7 hari, performa teknisi, dan margin suku cadang."
+                 onclick="openModal('03')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="03_Dashboard_Eksekutif_Owner.png" alt="Dashboard Eksekutif & Ringkasan Finansial Owner" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #03
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Owner, Direktur Operasional</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Dashboard Eksekutif & Ringkasan Finansial Owner
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Tampilan tingkat tinggi khusus pemilik bengkel untuk melihat tren pendapatan, volume unit 7 hari, performa teknisi, dan margin suku cadang.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Grafik tren volume masuk kendaraan 7 hari (Komparasi Mobil vs Sepeda Motor)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Breakdown pendapatan: Penjualan Jasa Servis vs Penjualan Suku Cadang</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Produktivitas per mekanik dan rata-rata durasi pengerjaan per unit</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 04 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="04"
+                 data-device="desktop"
+                 data-role="fo"
+                 data-title="manajemen antrean servis (jalur mobil & motor)"
+                 data-summary="sistem antrean modern dengan pemisahan jalur atomik untuk mobil dan motor, lengkap dengan fitur panggilan suara otomatis dan check-in walk-in."
+                 onclick="openModal('04')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="04_Manajemen_Antrean_Servis_Mobil_Motor.png" alt="Manajemen Antrean Servis (Jalur Mobil & Motor)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #04
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Front Office (FO), Customer Service</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Manajemen Antrean Servis (Jalur Mobil & Motor)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Sistem antrean modern dengan pemisahan jalur atomik untuk mobil dan motor, lengkap dengan fitur panggilan suara otomatis dan check-in walk-in.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pemisahan jalur tiket: Prefix A-001 (Mobil) dan Prefix M-001 (Motor)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pemberian nomor atomik dengan Database Pessimistic Locking (Bebas Duplikat)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tombol Audio Broadcast untuk memanggil nomor antrean ke pengeras suara</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 05 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="05"
+                 data-device="desktop"
+                 data-role="supervisor"
+                 data-title="monitoring utilisasi stall, lift, & bay"
+                 data-summary="peta digital lantai bengkel (shopfloor bay layout) yang menampilkan status setiap car lift, flat stall, dan pit motor secara langsung."
+                 onclick="openModal('05')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="05_Monitoring_Utilisasi_Stall_dan_Pit_Bay.png" alt="Monitoring Utilisasi Stall, Lift, & Bay" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #05
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Branch Manager, Supervisor QC, SA</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Monitoring Utilisasi Stall, Lift, & Bay
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Peta digital lantai bengkel (Shopfloor Bay Layout) yang menampilkan status setiap car lift, flat stall, dan pit motor secara langsung.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Indikator visual status stall: Kosong (Hijau), Terisi (Oranye), Perlu Bantuan (Merah)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Identitas mobil, nopol, dan nama mekanik tertera jelas di tiap stall</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Timer durasi pengerjaan fisik real-time</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 06 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="06"
+                 data-device="desktop"
+                 data-role="fo"
+                 data-title="daftar & manajemen jadwal booking servis"
+                 data-summary="tabel pengelolaan seluruh reservasi servis pelanggan dengan tab status cerdas (pending, dikonfirmasi, checked-in, dibatalkan)."
+                 onclick="openModal('06')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="06_Daftar_Jadwal_Booking_Servis.png" alt="Daftar & Manajemen Jadwal Booking Servis" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #06
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Front Office, Service Advisor</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Daftar & Manajemen Jadwal Booking Servis
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Tabel pengelolaan seluruh reservasi servis pelanggan dengan tab status cerdas (Pending, Dikonfirmasi, Checked-in, Dibatalkan).
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Penyaringan berdasarkan tanggal kedatangan, kategori servis, dan status</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Aksi 1-klik untuk konfirmasi kehadiran atau penjadwalan ulang</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tombol notifikasi WhatsApp otomatis ke nomor handphone pelanggan</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 07 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="07"
+                 data-device="desktop"
+                 data-role="fo"
+                 data-title="form registrasi booking servis baru (internal fo)"
+                 data-summary="formulir cepat pendaftaran reservasi bagi pelanggan yang menghubungi via telepon, whatsapp resmi, atau datang langsung ke meja pendaftaran."
+                 onclick="openModal('07')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="07_Form_Pendaftaran_Booking_Baru.png" alt="Form Registrasi Booking Servis Baru (Internal FO)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #07
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Front Office, Customer Service</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Form Registrasi Booking Servis Baru (Internal FO)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Formulir cepat pendaftaran reservasi bagi pelanggan yang menghubungi via telepon, WhatsApp resmi, atau datang langsung ke meja pendaftaran.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pencarian otomatis data pelanggan lama (Auto-fill data kendaraan)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pemisahan kategori servis: Servis Berkala, Tune Up, Ganti Oli, Perbaikan Berat</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pemilihan kuota jam kedatangan (Pagi, Siang, Sore) dengan batas kapasitas</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 08 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="08"
+                 data-device="mobile"
+                 data-role="customer"
+                 data-title="portal pelanggan: pemilihan jadwal servis mandiri"
+                 data-summary="antarmuka web seluler elegan bagi pelanggan untuk memilih tanggal dan jam servis sesuai waktu luang mereka langsung dari browser ponsel."
+                 onclick="openModal('08')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="08_Portal_Pelanggan_Pilih_Jadwal_Mobile.png" alt="Portal Pelanggan: Pemilihan Jadwal Servis Mandiri" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #08
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-purple-50 text-purple-700 border-purple-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">smartphone</span>
+                        Mobile 390px Portrait
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Pelanggan (Customer Publik)</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Portal Pelanggan: Pemilihan Jadwal Servis Mandiri
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Antarmuka web seluler elegan bagi pelanggan untuk memilih tanggal dan jam servis sesuai waktu luang mereka langsung dari browser ponsel.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Desain responsif mobile murni tanpa perlu download aplikasi di App Store/Play Store</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Kalender interaktif dengan indikator tanggal buka & slot yang tersedia</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pilihan sesi jam ramah sentuhan (Pagi 08:00-11:00, Siang 13:00-15:00)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 09 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="09"
+                 data-device="mobile"
+                 data-role="customer"
+                 data-title="portal pelanggan: tiket konfirmasi booking digital"
+                 data-summary="halaman konfirmasi reservasi dengan kartu digital resmi memuat kode booking monospaced dan panduan kedatangan ke bengkel."
+                 onclick="openModal('09')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="09_Portal_Pelanggan_Konfirmasi_Booking_Mobile.png" alt="Portal Pelanggan: Tiket Konfirmasi Booking Digital" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #09
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-purple-50 text-purple-700 border-purple-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">smartphone</span>
+                        Mobile 390px Portrait
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Pelanggan (Customer Publik)</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Portal Pelanggan: Tiket Konfirmasi Booking Digital
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Halaman konfirmasi reservasi dengan kartu digital resmi memuat Kode Booking monospaced dan panduan kedatangan ke bengkel.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Kode Booking unik resmi (contoh: BK-0231) dalam font monospaced</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tombol Simpan Jadwal langsung ke Google Calendar atau Apple Calendar</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tombol Buka Penunjuk Arah Google Maps menuju lokasi bengkel</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 10 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="10"
+                 data-device="desktop"
+                 data-role="sa"
+                 data-title="manajemen surat perintah kerja (spk / work order)"
+                 data-summary="tabel densitas tinggi yang mencatat seluruh dokumen surat perintah kerja (spk) aktif maupun historis dengan informasi biaya & status lengkap."
+                 onclick="openModal('10')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="10_Daftar_Work_Order_SPK_Table_View.png" alt="Manajemen Surat Perintah Kerja (SPK / Work Order)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #10
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Service Advisor, BM, Kasir</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Manajemen Surat Perintah Kerja (SPK / Work Order)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Tabel densitas tinggi yang mencatat seluruh dokumen Surat Perintah Kerja (SPK) aktif maupun historis dengan informasi biaya & status lengkap.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Nomor SPK resmi terstandar (contoh: WO-2026-0142)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Status badge resmi (Opsi A) dengan dot indikator berdenyut saat pengerjaan</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Informasi teknisi penanggung jawab (Lead Mechanic) dan nomor stall</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 11 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="11"
+                 data-device="desktop"
+                 data-role="sa"
+                 data-title="manajemen spk: segmentasi & tab status alur servis"
+                 data-summary="tampilan tersegmen untuk memantau unit berdasarkan siklus hidup: menunggu persetujuan, sedang dikerjakan, menunggu part, masuk qc, dan siap diambil."
+                 onclick="openModal('11')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="11_Daftar_Work_Order_SPK_Filter_Status.png" alt="Manajemen SPK: Segmentasi & Tab Status Alur Servis" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #11
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Service Advisor, Branch Manager</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Manajemen SPK: Segmentasi & Tab Status Alur Servis
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Tampilan tersegmen untuk memantau unit berdasarkan siklus hidup: Menunggu Persetujuan, Sedang Dikerjakan, Menunggu Part, Masuk QC, dan Siap Diambil.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tab counter dinamis yang langsung memperlihatkan jumlah mobil di tiap tahap</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Filter cepat untuk SPK yang membutuhkan perhatian darurat atau penambahan part</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Akses langsung ke lembar detail SPK dan pengiriman konfirmasi ke pemilik</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 12 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="12"
+                 data-device="desktop"
+                 data-role="sa"
+                 data-title="form penerbitan spk baru & estimasi servis"
+                 data-summary="formulir diagnosa teknis lengkap yang digunakan sa saat menerima kendaraan di pit resepsi servis untuk merumuskan estimasi biaya dan waktu."
+                 onclick="openModal('12')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="12_Form_Penerbitan_SPK_Baru.png" alt="Form Penerbitan SPK Baru & Estimasi Servis" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #12
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Service Advisor (SA)</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Form Penerbitan SPK Baru & Estimasi Servis
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Formulir diagnosa teknis lengkap yang digunakan SA saat menerima kendaraan di pit resepsi servis untuk merumuskan estimasi biaya dan waktu.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pencatatan Odometer awal (KM) untuk validasi jadwal servis berkala</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Checklist inspeksi awal: Kondisi fisik bodi, keluhan pelanggan, dan diagnosa SA</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pemilihan katalog jasa servis dan suku cadang asli dengan harga standar</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 13 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="13"
+                 data-device="desktop"
+                 data-role="sa"
+                 data-title="detail 360° surat perintah kerja (spk master view)"
+                 data-summary="pusat informasi komprehensif satu unit kendaraan yang mencakup 5 tab penting: ringkasan diagnosa, lembar inspeksi, item part & approval, tugas mekanik, dan riwayat audit."
+                 onclick="openModal('13')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="13_Detail_Lengkap_SPK_Work_Order.png" alt="Detail 360° Surat Perintah Kerja (SPK Master View)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #13
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Service Advisor, QC, Kasir, BM</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Detail 360° Surat Perintah Kerja (SPK Master View)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Pusat informasi komprehensif satu unit kendaraan yang mencakup 5 tab penting: Ringkasan Diagnosa, Lembar Inspeksi, Item Part & Approval, Tugas Mekanik, dan Riwayat Audit.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tab approval suku cadang: Status Pre-Approved, Menunggu Persetujuan, atau Ditolak</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Log audit status (Append-Only): Siapa mengubah status apa pada detik berapa</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tombol kirim tautan persetujuan ke WhatsApp pelanggan dalam 1 klik</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 14 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="14"
+                 data-device="tablet"
+                 data-role="mechanic"
+                 data-title="antarmuka tablet mekanik (tugas saya)"
+                 data-summary="antarmuka ergonomis berorientasi sentuh yang dipasang pada tablet di setiap stall/bay, dirancang khusus untuk kenyamanan mekanik bertangan kerja."
+                 onclick="openModal('14')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="14_Antarmuka_Tablet_Shopfloor_Mekanik.png" alt="Antarmuka Tablet Mekanik (Tugas Saya)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #14
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-emerald-50 text-emerald-700 border-emerald-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">tablet_mac</span>
+                        Shop Floor Tablet 1024px Landscape
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Mekanik & Teknisi Lapangan</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Antarmuka Tablet Mekanik (Tugas Saya)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Antarmuka ergonomis berorientasi sentuh yang dipasang pada tablet di setiap stall/bay, dirancang khusus untuk kenyamanan mekanik bertangan kerja.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Target sentuh besar (Touch Target 48px - 52px) mudah ditekan bahkan saat bersarung tangan</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Timer pengerjaan digital monospaced aktif dengan tombol Mulai / Selesai tugas</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Checklist langkah perbaikan teknis interaktif</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 15 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="15"
+                 data-device="tablet"
+                 data-role="qc"
+                 data-title="antarmuka tablet qc supervisor (uji kelayakan)"
+                 data-summary="lembar verifikasi mutu pengerjaan digital sebelum mobil boleh dicuci atau diserahkan ke pelanggan, menjaga reputasi keselamatan bengkel."
+                 onclick="openModal('15')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="15_Antarmuka_Tablet_Inspeksi_QC_Supervisor.png" alt="Antarmuka Tablet QC Supervisor (Uji Kelayakan)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #15
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-emerald-50 text-emerald-700 border-emerald-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">tablet_mac</span>
+                        Shop Floor Tablet 1024px Landscape
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Supervisor QC, Kepala Mekanik</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Antarmuka Tablet QC Supervisor (Uji Kelayakan)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Lembar verifikasi mutu pengerjaan digital sebelum mobil boleh dicuci atau diserahkan ke pelanggan, menjaga reputasi keselamatan bengkel.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Checklist uji kelayakan 12 poin (Sistem Pengereman, Mesin, Kelistrikan, Tekanan Ban, Uji Jalan, Kebersihan)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tombol keputusan tegas: Lolos QC (Hijau Emerald) vs Gagal/Rework (Merah Rose)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Kewajiban mengisi alasan teknis saat menolak pengerjaan (Rework Guardrail)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 16 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="16"
+                 data-device="desktop"
+                 data-role="admin"
+                 data-title="database master & crm pelanggan bengkel"
+                 data-summary="basis data terpusat seluruh pelanggan pemilik mobil dan motor, lengkap dengan catatan transaksi, jumlah kunjungan, dan integrasi whatsapp."
+                 onclick="openModal('16')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="16_Database_Master_Pelanggan.png" alt="Database Master & CRM Pelanggan Bengkel" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #16
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Front Office, Admin, CRM</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Database Master & CRM Pelanggan Bengkel
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Basis data terpusat seluruh pelanggan pemilik mobil dan motor, lengkap dengan catatan transaksi, jumlah kunjungan, dan integrasi WhatsApp.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tabel pelanggan densitas tinggi dengan nomor telepon format E.164 (+62...)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Statistik akumulasi kunjungan dan nilai total transaksi (Customer Lifetime Value)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Tombol ekspor data ke format CSV / Spreadsheet untuk analisa pemasaran</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 17 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="17"
+                 data-device="desktop"
+                 data-role="fo"
+                 data-title="profil 360° riwayat pelanggan (customer record)"
+                 data-summary="kartu profil terperinci pelanggan yang menampilkan seluruh kendaraan yang mereka miliki beserta histori riwayat perbaikan masa lalu."
+                 onclick="openModal('17')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="17_Profil_Detail_Riwayat_Pelanggan.png" alt="Profil 360° Riwayat Pelanggan (Customer Record)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #17
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Front Office, Service Advisor</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Profil 360° Riwayat Pelanggan (Customer Record)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Kartu profil terperinci pelanggan yang menampilkan seluruh kendaraan yang mereka miliki beserta histori riwayat perbaikan masa lalu.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Identitas kontak terverifikasi dengan alamat lengkap</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Daftar kendaraan multi-unit (Mobil keluarga, mobil operasional, motor)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Riwayat transaksi SPK masa lalu lengkap dengan total rupiah yang dibayarkan</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 18 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="18"
+                 data-device="desktop"
+                 data-role="sa"
+                 data-title="kartu medis kendaraan (vehicle medical record)"
+                 data-summary="rekam medis lengkap berbasis nomor polisi unik yang mencatat spesifikasi mesin, transmisi, nomor rangka (vin), serta riwayat penggantian part."
+                 onclick="openModal('18')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="18_Kartu_Medis_Histori_Kendaraan.png" alt="Kartu Medis Kendaraan (Vehicle Medical Record)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #18
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Service Advisor, Mekanik, Admin</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Kartu Medis Kendaraan (Vehicle Medical Record)
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Rekam medis lengkap berbasis nomor polisi unik yang mencatat spesifikasi mesin, transmisi, nomor rangka (VIN), serta riwayat penggantian part.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Spesifikasi teknis lengkap: Merk, Model, Tahun, VIN, No Mesin, Tipe Transmisi, Odometer KM</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Riwayat seluruh pekerjaan bengkel dan suku cadang yang pernah terpasang</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pencarian nopol ternormalisasi (anti-duplikasi ejaan plat nomor)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 19 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="19"
+                 data-device="mobile"
+                 data-role="customer"
+                 data-title="portal publik: live tracking servis & online approval"
+                 data-summary="portal pemantauan transparan berbasis token kriptografis tanpa login, memungkinkan pelanggan memantau progres servis dan menyetujui part tambahan."
+                 onclick="openModal('19')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="19_Live_Tracking_Servis_Pelanggan_Mobile.png" alt="Portal Publik: Live Tracking Servis & Online Approval" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #19
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-purple-50 text-purple-700 border-purple-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">smartphone</span>
+                        Customer Mobile Web 390px
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Pelanggan (Customer Publik)</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Portal Publik: Live Tracking Servis & Online Approval
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Portal pemantauan transparan berbasis token kriptografis tanpa login, memungkinkan pelanggan memantau progres servis dan menyetujui part tambahan.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Akses tanpa login via URL Token Kriptografis Unik (Aman & Privat)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Nomor polisi disamarkan untuk privasi publik: B 12•• XYZ</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Live Progress Stepper: Diterima -> Pengerjaan Stall -> Uji QC -> Siap Diambil</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feature Card 20 -->
+            <div class="feature-card bg-white rounded-xl border border-gray-200 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col cursor-pointer group"
+                 data-id="20"
+                 data-device="desktop"
+                 data-role="cashier"
+                 data-title="modul kasir & penerimaan pembayaran"
+                 data-summary="pusat penagihan spk yang lolos uji kelayakan qc, penerimaan pembayaran multi-metode (cash, qris, transfer, edc), dan pencetakan faktur resmi."
+                 onclick="openModal('20')">
+                
+                <!-- Thumbnail Preview Container -->
+                <div class="relative bg-gray-100 border-b border-gray-100 overflow-hidden aspect-[16/10] flex items-center justify-center">
+                    <img src="20_Kasir_Penerimaan_Pembayaran.png" alt="Modul Kasir & Penerimaan Pembayaran" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gray-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/90 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 backdrop-blur-xs">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span>
+                            Resolusi Penuh
+                        </span>
+                    </div>
+                    <!-- Number Badge -->
+                    <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-gray-900/85 text-white backdrop-blur-xs">
+                        #20
+                    </span>
+                    <!-- Device Pill -->
+                    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border bg-blue-50 text-blue-700 border-blue-200 backdrop-blur-xs flex items-center gap-1 bg-white/90">
+                        <span class="material-symbols-outlined text-[13px]">desktop_windows</span>
+                        Desktop 1280px+
+                    </span>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-1.5 text-[11px] font-semibold text-orange-600">
+                            <span class="material-symbols-outlined text-[15px]">badge</span>
+                            <span>Kasir, Branch Manager</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 leading-snug group-hover:text-orange-600 transition-colors">
+                            Modul Kasir & Penerimaan Pembayaran
+                        </h3>
+                        <p class="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                            Pusat penagihan SPK yang lolos uji kelayakan QC, penerimaan pembayaran multi-metode (Cash, QRIS, Transfer, EDC), dan pencetakan faktur resmi.
+                        </p>
+                    </div>
+
+                    <!-- Key Highlights List -->
+                    <div class="pt-3 border-t border-gray-100 space-y-1.5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Fitur Utama:</span>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Daftar SPK siap ditagih (Hanya yang telah disetujui lolos QC teknis)</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Rincian itemized faktur tagihan jasa servis dan suku cadang</span></li><li class="flex items-start gap-1.5 text-xs text-gray-600"><span class="text-emerald-500 font-bold">&check;</span> <span>Pilihan metode bayar fleksibel: Tunai, QRIS, Debit/Kredit EDC, Transfer</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-orange-600 font-bold group-hover:text-orange-700">
+                        <span>Lihat Rincian Teknis & Nilai Bisnis</span>
+                        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="noResults" class="hidden text-center py-16 bg-white rounded-xl border border-gray-200 p-8 space-y-3">
+            <span class="material-symbols-outlined text-gray-300 text-5xl">search_off</span>
+            <h3 class="text-base font-bold text-gray-800">Tidak ada fitur yang cocok</h3>
+            <p class="text-xs text-gray-500">Coba ubah kata kunci pencarian atau reset filter perangkat & peran.</p>
+            <button onclick="resetFilters()" class="px-4 py-2 rounded-lg bg-orange-600 text-white text-xs font-bold hover:bg-orange-700 transition cursor-pointer">
+                Reset Semua Filter
+            </button>
+        </div>
+    </main>
+
+    <!-- Modal Lightbox (Full Resolution & Deep Dive) -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-gray-950/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-6xl w-full max-h-[94vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            <!-- Modal Header -->
+            <div class="px-5 py-3.5 bg-gray-900 text-white flex items-center justify-between border-b border-gray-800 flex-shrink-0">
+                <div class="flex items-center gap-3">
+                    <span id="modalIdBadge" class="px-2 py-0.5 rounded font-mono text-xs font-bold bg-orange-600 text-white">#01</span>
+                    <div>
+                        <h2 id="modalTitle" class="text-sm sm:text-base font-bold text-white tracking-tight leading-none">Judul Fitur</h2>
+                        <span id="modalRole" class="text-[11px] text-gray-400 mt-0.5 block">Role & Perangkat</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="prevFeature()" class="p-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition cursor-pointer" title="Layar Sebelumnya (Panah Kiri)">
+                        <span class="material-symbols-outlined text-base">arrow_back</span>
+                    </button>
+                    <span id="modalCounter" class="text-xs font-mono text-gray-400 px-1">1 / 20</span>
+                    <button onclick="nextFeature()" class="p-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition cursor-pointer" title="Layar Selanjutnya (Panah Kanan)">
+                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+                    </button>
+                    <div class="w-px h-5 bg-gray-700 mx-1"></div>
+                    <button onclick="closeModal()" class="p-1.5 rounded-lg bg-gray-800 hover:bg-red-600 text-gray-300 hover:text-white transition cursor-pointer" title="Tutup (Esc)">
+                        <span class="material-symbols-outlined text-base">close</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Content (2 Columns: Image Viewport + Info Sidebar) -->
+            <div class="flex-1 overflow-y-auto grid grid-cols-1 lg:grid-cols-12 bg-gray-50">
+                <!-- Left: Full Screenshot Display -->
+                <div class="lg:col-span-8 p-4 bg-gray-900 flex flex-col items-center justify-start overflow-y-auto max-h-[75vh]">
+                    <div class="relative w-full flex items-center justify-center">
+                        <img id="modalImage" src="" alt="" class="max-w-full rounded shadow-xl border border-gray-800 object-contain" />
+                    </div>
+                    <div class="mt-3 flex items-center gap-3 text-xs text-gray-400">
+                        <a id="modalDownloadBtn" href="" download class="hover:text-orange-400 flex items-center gap-1 font-semibold">
+                            <span class="material-symbols-outlined text-sm">download</span>
+                            Unduh Gambar Asli
+                        </a>
+                        <span>&bull;</span>
+                        <a id="modalNewTabBtn" href="" target="_blank" class="hover:text-orange-400 flex items-center gap-1 font-semibold">
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            Buka di Tab Baru
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Information & Technical Highlights -->
+                <div class="lg:col-span-4 p-6 bg-white border-t lg:border-t-0 lg:border-l border-gray-200 overflow-y-auto max-h-[75vh] space-y-5">
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-orange-600">Ringkasan Modul</span>
+                        <p id="modalSummary" class="text-xs text-gray-700 mt-1 leading-relaxed"></p>
+                    </div>
+
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-500">Fitur & Komponen Kunci</span>
+                        <ul id="modalHighlights" class="mt-2 space-y-2"></ul>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-orange-50 border border-orange-200 text-orange-950 space-y-1">
+                        <div class="flex items-center gap-1.5 text-xs font-bold text-orange-800">
+                            <span class="material-symbols-outlined text-base">trending_up</span>
+                            <span>Nilai Tambah Bisnis (ROI)</span>
+                        </div>
+                        <p id="modalBusinessValue" class="text-xs text-orange-900/90 leading-relaxed"></p>
+                    </div>
+
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-[11px] text-gray-400">BengkelKu WMS &bull; Enterprise Ready</span>
+                        <button onclick="closeModal()" class="px-4 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold transition cursor-pointer">
+                            Tutup Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F2937] text-gray-400 py-6 border-t border-gray-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 BengkelKu WMS. Hak Cipta Dilindungi. Sistem Manajemen Operasional Bengkel Mobil & Motor.</p>
+            <div class="flex items-center gap-4">
+                <span>Laravel 13 &bull; Filament 5 &bull; Tailwind CSS</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        const features = [{"id": "01", "file": "01_Login_Multi_Role_Akses_Staf.png", "title": "Halaman Masuk & Demo Switcher Multi-Role", "category": "desktop", "role": "Seluruh Staf (8 Peran)", "role_code": "all", "device": "Desktop 1280px+ / Tablet", "device_type": "desktop", "summary": "Portal autentikasi tunggal dengan fitur Demo Switcher 1-klik untuk 8 peran staf internal (Owner, BM, Admin, FO, SA, Mekanik, QC, Kasir).", "highlights": ["Pemisahan hak akses ketat (Role-Based Access Control) otomatis", "Demo Switcher 1-klik untuk presentasi & pengujian lintas peran", "Redirect instan ke antarmuka yang sesuai dengan tugasnya", "Kredensial tersandi aman dengan proteksi brute-force login"], "business_value": "Memudahkan staf login sesuai wewenang dan memungkinkan pengujian atau presentasi alur kerja bengkel secara mulus tanpa repot login-logout manual."}, {"id": "02", "file": "02_Dashboard_Operasional_Bengkel.png", "title": "Dashboard Operasional Harian Bengkel", "category": "desktop", "role": "Branch Manager, SA, Kepala Bengkel", "role_code": "sa", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Pusat komando operasional bengkel untuk memonitor utilisasi lift/stall, daftar pekerjaan berjalan, antrean aktif, dan alert operasional real-time.", "highlights": ["KPI Card: Unit Masuk Hari Ini, SPK In-Progress, Menunggu Part, Siap Diambil", "Visualisasi okupansi Car Lift, Pit Motor, dan Diagnostic Bay", "Daftar pekerjaan aktif dengan SLA estimasi waktu selesai", "Deteksi dini keterlambatan pekerjaan (Early Warning System)"], "business_value": "Meningkatkan utilisasi stall hingga 35% dan memastikan tidak ada kendaraan pelanggan yang terlantar tanpa pengerjaan di bengkel."}, {"id": "03", "file": "03_Dashboard_Eksekutif_Owner.png", "title": "Dashboard Eksekutif & Ringkasan Finansial Owner", "category": "executive", "role": "Owner, Direktur Operasional", "role_code": "owner", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Tampilan tingkat tinggi khusus pemilik bengkel untuk melihat tren pendapatan, volume unit 7 hari, performa teknisi, dan margin suku cadang.", "highlights": ["Grafik tren volume masuk kendaraan 7 hari (Komparasi Mobil vs Sepeda Motor)", "Breakdown pendapatan: Penjualan Jasa Servis vs Penjualan Suku Cadang", "Produktivitas per mekanik dan rata-rata durasi pengerjaan per unit", "Ringkasan multi-cabang (Multi-Branch Readiness) dalam 1 layar"], "business_value": "Memberikan kepastian angka finansial harian dan bulanan secara objektif kepada pemilik bisnis tanpa perlu memeriksa tumpukan nota manual."}, {"id": "04", "file": "04_Manajemen_Antrean_Servis_Mobil_Motor.png", "title": "Manajemen Antrean Servis (Jalur Mobil & Motor)", "category": "desktop", "role": "Front Office (FO), Customer Service", "role_code": "fo", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Sistem antrean modern dengan pemisahan jalur atomik untuk mobil dan motor, lengkap dengan fitur panggilan suara otomatis dan check-in walk-in.", "highlights": ["Pemisahan jalur tiket: Prefix A-001 (Mobil) dan Prefix M-001 (Motor)", "Pemberian nomor atomik dengan Database Pessimistic Locking (Bebas Duplikat)", "Tombol Audio Broadcast untuk memanggil nomor antrean ke pengeras suara", "Integrasi check-in instan dari reservasi booking online"], "business_value": "Menghilangkan kekacauan di area meja depan, mengurangi waktu tunggu hingga 40%, dan menciptakan suasana bengkel yang tertib profesional."}, {"id": "05", "file": "05_Monitoring_Utilisasi_Stall_dan_Pit_Bay.png", "title": "Monitoring Utilisasi Stall, Lift, & Bay", "category": "desktop", "role": "Branch Manager, Supervisor QC, SA", "role_code": "supervisor", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Peta digital lantai bengkel (Shopfloor Bay Layout) yang menampilkan status setiap car lift, flat stall, dan pit motor secara langsung.", "highlights": ["Indikator visual status stall: Kosong (Hijau), Terisi (Oranye), Perlu Bantuan (Merah)", "Identitas mobil, nopol, dan nama mekanik tertera jelas di tiap stall", "Timer durasi pengerjaan fisik real-time", "Alokasi kendaraan dari antrean tunggu ke stall yang kosong secara efisien"], "business_value": "Memaksimalkan kapasitas fisik bengkel, mencegah stall menganggur, dan mempercepat rotasi kendaraan servis per hari."}, {"id": "06", "file": "06_Daftar_Jadwal_Booking_Servis.png", "title": "Daftar & Manajemen Jadwal Booking Servis", "category": "desktop", "role": "Front Office, Service Advisor", "role_code": "fo", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Tabel pengelolaan seluruh reservasi servis pelanggan dengan tab status cerdas (Pending, Dikonfirmasi, Checked-in, Dibatalkan).", "highlights": ["Penyaringan berdasarkan tanggal kedatangan, kategori servis, dan status", "Aksi 1-klik untuk konfirmasi kehadiran atau penjadwalan ulang", "Tombol notifikasi WhatsApp otomatis ke nomor handphone pelanggan", "Pencarian instan berdasarkan nomor polisi atau nama pemesan"], "business_value": "Membantu bengkel merencanakan beban kerja harian sebelum pintu bengkel dibuka, meminimalkan waktu tunggu di jam-jam sibuk."}, {"id": "07", "file": "07_Form_Pendaftaran_Booking_Baru.png", "title": "Form Registrasi Booking Servis Baru (Internal FO)", "category": "desktop", "role": "Front Office, Customer Service", "role_code": "fo", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Formulir cepat pendaftaran reservasi bagi pelanggan yang menghubungi via telepon, WhatsApp resmi, atau datang langsung ke meja pendaftaran.", "highlights": ["Pencarian otomatis data pelanggan lama (Auto-fill data kendaraan)", "Pemisahan kategori servis: Servis Berkala, Tune Up, Ganti Oli, Perbaikan Berat", "Pemilihan kuota jam kedatangan (Pagi, Siang, Sore) dengan batas kapasitas", "Pencatatan catatan keluhan awal pelanggan"], "business_value": "Mempercepat proses administrasi pendaftaran pelanggan menjadi kurang dari 1 menit per kendaraan."}, {"id": "08", "file": "08_Portal_Pelanggan_Pilih_Jadwal_Mobile.png", "title": "Portal Pelanggan: Pemilihan Jadwal Servis Mandiri", "category": "mobile", "role": "Pelanggan (Customer Publik)", "role_code": "customer", "device": "Mobile 390px Portrait", "device_type": "mobile", "summary": "Antarmuka web seluler elegan bagi pelanggan untuk memilih tanggal dan jam servis sesuai waktu luang mereka langsung dari browser ponsel.", "highlights": ["Desain responsif mobile murni tanpa perlu download aplikasi di App Store/Play Store", "Kalender interaktif dengan indikator tanggal buka & slot yang tersedia", "Pilihan sesi jam ramah sentuhan (Pagi 08:00-11:00, Siang 13:00-15:00)", "Indikator sisa kuota servis transparan"], "business_value": "Memberikan kenyamanan reservasi 24 jam sehari bagi pelanggan, meningkatkan retensi dan konversi pelanggan baru."}, {"id": "09", "file": "09_Portal_Pelanggan_Konfirmasi_Booking_Mobile.png", "title": "Portal Pelanggan: Tiket Konfirmasi Booking Digital", "category": "mobile", "role": "Pelanggan (Customer Publik)", "role_code": "customer", "device": "Mobile 390px Portrait", "device_type": "mobile", "summary": "Halaman konfirmasi reservasi dengan kartu digital resmi memuat Kode Booking monospaced dan panduan kedatangan ke bengkel.", "highlights": ["Kode Booking unik resmi (contoh: BK-0231) dalam font monospaced", "Tombol Simpan Jadwal langsung ke Google Calendar atau Apple Calendar", "Tombol Buka Penunjuk Arah Google Maps menuju lokasi bengkel", "Tombol Pantau Status Servis untuk memantau progres ketika tiba di lokasi"], "business_value": "Mencegah pelanggan lupa jadwal servis dan meningkatkan tingkat kedatangan (Show-up rate) hingga lebih dari 90%."}, {"id": "10", "file": "10_Daftar_Work_Order_SPK_Table_View.png", "title": "Manajemen Surat Perintah Kerja (SPK / Work Order)", "category": "desktop", "role": "Service Advisor, BM, Kasir", "role_code": "sa", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Tabel densitas tinggi yang mencatat seluruh dokumen Surat Perintah Kerja (SPK) aktif maupun historis dengan informasi biaya & status lengkap.", "highlights": ["Nomor SPK resmi terstandar (contoh: WO-2026-0142)", "Status badge resmi (Opsi A) dengan dot indikator berdenyut saat pengerjaan", "Informasi teknisi penanggung jawab (Lead Mechanic) dan nomor stall", "Total estimasi biaya jasa dan suku cadang dalam format mata uang Rupiah rapi"], "business_value": "Menjadi buku besar operasional digital yang rapi, menghilangkan kertas SPK fisik yang rentan hilang atau rusak terkena oli."}, {"id": "11", "file": "11_Daftar_Work_Order_SPK_Filter_Status.png", "title": "Manajemen SPK: Segmentasi & Tab Status Alur Servis", "category": "desktop", "role": "Service Advisor, Branch Manager", "role_code": "sa", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Tampilan tersegmen untuk memantau unit berdasarkan siklus hidup: Menunggu Persetujuan, Sedang Dikerjakan, Menunggu Part, Masuk QC, dan Siap Diambil.", "highlights": ["Tab counter dinamis yang langsung memperlihatkan jumlah mobil di tiap tahap", "Filter cepat untuk SPK yang membutuhkan perhatian darurat atau penambahan part", "Akses langsung ke lembar detail SPK dan pengiriman konfirmasi ke pemilik", "Pencarian multi-parameter: Nopol, Nama Pelanggan, atau No SPK"], "business_value": "Mempermudah Service Advisor memprioritaskan komunikasi dengan pelanggan dan memantau pesanan suku cadang yang belum disetujui."}, {"id": "12", "file": "12_Form_Penerbitan_SPK_Baru.png", "title": "Form Penerbitan SPK Baru & Estimasi Servis", "category": "desktop", "role": "Service Advisor (SA)", "role_code": "sa", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Formulir diagnosa teknis lengkap yang digunakan SA saat menerima kendaraan di pit resepsi servis untuk merumuskan estimasi biaya dan waktu.", "highlights": ["Pencatatan Odometer awal (KM) untuk validasi jadwal servis berkala", "Checklist inspeksi awal: Kondisi fisik bodi, keluhan pelanggan, dan diagnosa SA", "Pemilihan katalog jasa servis dan suku cadang asli dengan harga standar", "Alokasi teknisi kepala (Lead Mechanic) dan stall kerja yang dituju"], "business_value": "Mencegah sengketa biaya dengan pelanggan karena seluruh estimasi harga jasa dan suku cadang terdokumentasi jelas sejak menit pertama."}, {"id": "13", "file": "13_Detail_Lengkap_SPK_Work_Order.png", "title": "Detail 360° Surat Perintah Kerja (SPK Master View)", "category": "desktop", "role": "Service Advisor, QC, Kasir, BM", "role_code": "sa", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Pusat informasi komprehensif satu unit kendaraan yang mencakup 5 tab penting: Ringkasan Diagnosa, Lembar Inspeksi, Item Part & Approval, Tugas Mekanik, dan Riwayat Audit.", "highlights": ["Tab approval suku cadang: Status Pre-Approved, Menunggu Persetujuan, atau Ditolak", "Log audit status (Append-Only): Siapa mengubah status apa pada detik berapa", "Tombol kirim tautan persetujuan ke WhatsApp pelanggan dalam 1 klik", "Aksi penerbitan faktur tagihan (Invoice) otomatis setelah lolos inspeksi QC"], "business_value": "Menjamin akuntabilitas 100% pada setiap rupiah biaya servis dan memudahkan koordinasi antar-staf dari SA hingga Kasir."}, {"id": "14", "file": "14_Antarmuka_Tablet_Shopfloor_Mekanik.png", "title": "Antarmuka Tablet Mekanik (Tugas Saya)", "category": "tablet", "role": "Mekanik & Teknisi Lapangan", "role_code": "mechanic", "device": "Shop Floor Tablet 1024px Landscape", "device_type": "tablet", "summary": "Antarmuka ergonomis berorientasi sentuh yang dipasang pada tablet di setiap stall/bay, dirancang khusus untuk kenyamanan mekanik bertangan kerja.", "highlights": ["Target sentuh besar (Touch Target 48px - 52px) mudah ditekan bahkan saat bersarung tangan", "Timer pengerjaan digital monospaced aktif dengan tombol Mulai / Selesai tugas", "Checklist langkah perbaikan teknis interaktif", "Tombol darurat satu sentuh: Panggil Bantuan SA / Supervisor"], "business_value": "Meniadakan lembaran kertas kerja di bengkel yang kotor, mencatat jam kerja mekanik secara presisi, dan mempercepat respons SA jika ada kendala di stall."}, {"id": "15", "file": "15_Antarmuka_Tablet_Inspeksi_QC_Supervisor.png", "title": "Antarmuka Tablet QC Supervisor (Uji Kelayakan)", "category": "tablet", "role": "Supervisor QC, Kepala Mekanik", "role_code": "qc", "device": "Shop Floor Tablet 1024px Landscape", "device_type": "tablet", "summary": "Lembar verifikasi mutu pengerjaan digital sebelum mobil boleh dicuci atau diserahkan ke pelanggan, menjaga reputasi keselamatan bengkel.", "highlights": ["Checklist uji kelayakan 12 poin (Sistem Pengereman, Mesin, Kelistrikan, Tekanan Ban, Uji Jalan, Kebersihan)", "Tombol keputusan tegas: Lolos QC (Hijau Emerald) vs Gagal/Rework (Merah Rose)", "Kewajiban mengisi alasan teknis saat menolak pengerjaan (Rework Guardrail)", "Aturan sistem keras (BR-08): Faktur kasir terkunci sebelum ada persetujuan QC"], "business_value": "Mencegah terjadinya komplain pelanggan (Zero Return-Job) dan memastikan standar keselamatan kendaraan pelanggan terjamin sempurna."}, {"id": "16", "file": "16_Database_Master_Pelanggan.png", "title": "Database Master & CRM Pelanggan Bengkel", "category": "desktop", "role": "Front Office, Admin, CRM", "role_code": "admin", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Basis data terpusat seluruh pelanggan pemilik mobil dan motor, lengkap dengan catatan transaksi, jumlah kunjungan, dan integrasi WhatsApp.", "highlights": ["Tabel pelanggan densitas tinggi dengan nomor telepon format E.164 (+62...)", "Statistik akumulasi kunjungan dan nilai total transaksi (Customer Lifetime Value)", "Tombol ekspor data ke format CSV / Spreadsheet untuk analisa pemasaran", "Akses langsung ke rekam jejak armada kendaraan pelanggan"], "business_value": "Aset berharga bagi bengkel untuk program loyalitas, pengingat ganti oli berkala, dan promosi promo musiman (Lebaran/Tahun Baru)."}, {"id": "17", "file": "17_Profil_Detail_Riwayat_Pelanggan.png", "title": "Profil 360° Riwayat Pelanggan (Customer Record)", "category": "desktop", "role": "Front Office, Service Advisor", "role_code": "fo", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Kartu profil terperinci pelanggan yang menampilkan seluruh kendaraan yang mereka miliki beserta histori riwayat perbaikan masa lalu.", "highlights": ["Identitas kontak terverifikasi dengan alamat lengkap", "Daftar kendaraan multi-unit (Mobil keluarga, mobil operasional, motor)", "Riwayat transaksi SPK masa lalu lengkap dengan total rupiah yang dibayarkan", "Tombol pengiriman pesan WhatsApp pengingat servis berikutnya"], "business_value": "Membuat pelanggan merasa dihargai dan dipahami secara personal, meningkatkan repeat order dan kepuasan pelanggan."}, {"id": "18", "file": "18_Kartu_Medis_Histori_Kendaraan.png", "title": "Kartu Medis Kendaraan (Vehicle Medical Record)", "category": "desktop", "role": "Service Advisor, Mekanik, Admin", "role_code": "sa", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Rekam medis lengkap berbasis nomor polisi unik yang mencatat spesifikasi mesin, transmisi, nomor rangka (VIN), serta riwayat penggantian part.", "highlights": ["Spesifikasi teknis lengkap: Merk, Model, Tahun, VIN, No Mesin, Tipe Transmisi, Odometer KM", "Riwayat seluruh pekerjaan bengkel dan suku cadang yang pernah terpasang", "Pencarian nopol ternormalisasi (anti-duplikasi ejaan plat nomor)", "Deteksi histori kerusakan berulang pada komponen yang sama"], "business_value": "Membantu Service Advisor mendiagnosa masalah kendaraan dalam hitungan detik berdasarkan riwayat servis sebelumnya."}, {"id": "19", "file": "19_Live_Tracking_Servis_Pelanggan_Mobile.png", "title": "Portal Publik: Live Tracking Servis & Online Approval", "category": "mobile", "role": "Pelanggan (Customer Publik)", "role_code": "customer", "device": "Customer Mobile Web 390px", "device_type": "mobile", "summary": "Portal pemantauan transparan berbasis token kriptografis tanpa login, memungkinkan pelanggan memantau progres servis dan menyetujui part tambahan.", "highlights": ["Akses tanpa login via URL Token Kriptografis Unik (Aman & Privat)", "Nomor polisi disamarkan untuk privasi publik: B 12•• XYZ", "Live Progress Stepper: Diterima -> Pengerjaan Stall -> Uji QC -> Siap Diambil", "Modul persetujuan digital temuan part tambahan (Tombol Setuju / Tolak langsung dari HP)"], "business_value": "Meningkatkan kepuasan dan kepercayaan pelanggan hingga 98%, mengurangi telepon tanya-tanya status ke bengkel hingga 80%."}, {"id": "20", "file": "20_Kasir_Penerimaan_Pembayaran.png", "title": "Modul Kasir & Penerimaan Pembayaran", "category": "desktop", "role": "Kasir, Branch Manager", "role_code": "cashier", "device": "Desktop 1280px+", "device_type": "desktop", "summary": "Pusat penagihan SPK yang lolos uji kelayakan QC, penerimaan pembayaran multi-metode (Cash, QRIS, Transfer, EDC), dan pencetakan faktur resmi.", "highlights": ["Daftar SPK siap ditagih (Hanya yang telah disetujui lolos QC teknis)", "Rincian itemized faktur tagihan jasa servis dan suku cadang", "Pilihan metode bayar fleksibel: Tunai, QRIS, Debit/Kredit EDC, Transfer", "Pemisahan status finansial (Paid/Unpaid) dari status pengerjaan fisik"], "business_value": "Mencegah kebocoran kas kasir, memastikan tidak ada mobil keluar sebelum tagihan beres, dan mempercepat rekonsiliasi kas harian."}];
+
+        let currentDeviceFilter = 'all';
+        let currentRoleFilter = 'all';
+        let currentSearchQuery = '';
+        let currentModalIndex = 0;
+
+        function setDeviceFilter(device) {
+            currentDeviceFilter = device;
+            document.querySelectorAll('.device-btn').forEach(btn => {
+                if (btn.getAttribute('data-device') === device) {
+                    btn.className = 'device-btn active px-3 py-1.5 rounded-lg text-xs font-bold transition bg-gray-900 text-white shadow-2xs';
+                } else {
+                    btn.className = 'device-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-gray-100 text-gray-700 hover:bg-gray-200';
+                }
+            });
+            applyFilters();
+        }
+
+        function applyFilters() {
+            currentRoleFilter = document.getElementById('roleFilter').value;
+            currentSearchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
+
+            let visibleCount = 0;
+            const cards = document.querySelectorAll('.feature-card');
+
+            cards.forEach(card => {
+                const device = card.getAttribute('data-device');
+                const role = card.getAttribute('data-role');
+                const title = card.getAttribute('data-title');
+                const summary = card.getAttribute('data-summary');
+
+                const matchDevice = (currentDeviceFilter === 'all' || device === currentDeviceFilter);
+                const matchRole = (currentRoleFilter === 'all' || role === currentRoleFilter || role === 'all');
+                const matchSearch = (!currentSearchQuery || title.includes(currentSearchQuery) || summary.includes(currentSearchQuery));
+
+                if (matchDevice && matchRole && matchSearch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            document.getElementById('resultCount').textContent = `Menampilkan ${visibleCount} dari ${features.length} Layar Sistem`;
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('roleFilter').value = 'all';
+            setDeviceFilter('all');
+        }
+
+        function openModal(featureId) {
+            const index = features.findIndex(f => f.id === featureId);
+            if (index !== -1) {
+                currentModalIndex = index;
+                renderModal();
+                document.getElementById('lightboxModal').classList.remove('hidden');
+                document.body.classList.add('modal-active');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        }
+
+        function nextFeature() {
+            currentModalIndex = (currentModalIndex + 1) % features.length;
+            renderModal();
+        }
+
+        function prevFeature() {
+            currentModalIndex = (currentModalIndex - 1 + features.length) % features.length;
+            renderModal();
+        }
+
+        function renderModal() {
+            const item = features[currentModalIndex];
+            document.getElementById('modalIdBadge').textContent = '#' + item.id;
+            document.getElementById('modalTitle').textContent = item.title;
+            document.getElementById('modalRole').textContent = item.role + ' • ' + item.device;
+            document.getElementById('modalCounter').textContent = (currentModalIndex + 1) + ' / ' + features.length;
+
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = item.file;
+            modalImg.alt = item.title;
+
+            document.getElementById('modalDownloadBtn').href = item.file;
+            document.getElementById('modalNewTabBtn').href = item.file;
+
+            document.getElementById('modalSummary').textContent = item.summary;
+            document.getElementById('modalBusinessValue').textContent = item.business_value;
+
+            const highlightsList = document.getElementById('modalHighlights');
+            highlightsList.innerHTML = '';
+            item.highlights.forEach(h => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start gap-2 text-xs text-gray-700';
+                li.innerHTML = '<span class="text-emerald-600 font-bold text-sm">✓</span> <span>' + h + '</span>';
+                highlightsList.appendChild(li);
+            });
+        }
+
+        function startPresentation() {
+            currentModalIndex = 0;
+            openModal(features[0].id);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('lightboxModal');
+            if (!modal.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowRight') nextFeature();
+                if (e.key === 'ArrowLeft') prevFeature();
+            }
+        });
+    </script>
+</body>
+</html>
